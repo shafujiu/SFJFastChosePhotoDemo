@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-Mr-5EK">
+                                <rect key="frame" x="172" y="66" width="31" height="30"/>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOi-VB-CN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBc-AL-MF5">
+                                <rect key="frame" x="156.5" y="132" width="62" height="30"/>
+                                <state key="normal" title="选择照片"/>
+                                <connections>
+                                    <action selector="chosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tc8-Eu-5qB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mcw-oS-b25">
+                                <rect key="frame" x="67" y="499" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Tga-g8-s6n"/>
+                                    <constraint firstAttribute="height" constant="128" id="ThI-Hb-TyJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mcw-oS-b25" secondAttribute="bottom" constant="40" id="5OJ-2c-ONw"/>
+                            <constraint firstItem="gzu-Mr-5EK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="jSL-lj-GqE"/>
+                            <constraint firstItem="LBc-AL-MF5" firstAttribute="top" secondItem="gzu-Mr-5EK" secondAttribute="bottom" constant="36" id="kn4-wr-suS"/>
+                            <constraint firstItem="LBc-AL-MF5" firstAttribute="centerX" secondItem="gzu-Mr-5EK" secondAttribute="centerX" id="pQN-YK-tyS"/>
+                            <constraint firstItem="Mcw-oS-b25" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qlQ-qI-gCk"/>
+                            <constraint firstItem="gzu-Mr-5EK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yEU-hO-L5M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageViw" destination="Mcw-oS-b25" id="8bb-gg-gCT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
